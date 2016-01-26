@@ -1,6 +1,9 @@
 source 'https://rubygems.org'
 
-
+gem 'devise', '>= 3.2.4'
+gem 'simple_form'
+gem 'bootstrap-sass', '~> 3.3.6'
+gem 'sprockets', '2.11.0'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.4'
 # Use postgresql as the database for Active Record
