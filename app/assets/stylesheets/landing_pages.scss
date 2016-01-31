@@ -1,3 +1,104 @@
 // Place all the styles related to the landing_pages controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+/* general styles */
+html, body {
+  height: 100%;
+  width: 100%;
+}
+
+/* padded section */
+.pad-section {
+  padding: 50px 0;
+}
+.pad-section img {
+  width: 100%;
+}
+
+/* vertical-centered text */
+.text-vcenter {
+  display: table-cell;
+  text-align: center;
+  vertical-align: middle;
+}
+.text-vcenter h1 {
+  font-size: 4.5em;
+  font-weight: 700;
+  margin: 0;
+  padding: 0;
+}
+
+/* additional sections */
+#hero {
+  background: url('/assets/hero.jpg') no-repeat center center fixed; 
+  color: #ffffff;
+  display: table;
+  height: 100%;
+  position: relative;
+  width: 100%;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+#blog {
+  background-color: #306d9f;
+  color: #ffffff;
+}
+
+#builder {
+  background: url('/assets/builder.jpg') no-repeat center center fixed;
+  color: #ffffff;
+  display: table;
+  height: 100%;
+  position: relative;
+  width: 100%;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+#resources {
+  background-color: #306d9f;
+  color: #ffffff;
+}
+#resources .glyphicon {
+  border: 2px solid #FFFFFF;
+  border-radius: 50%;
+  display: inline-block;
+  font-size: 60px;
+  height: 140px;
+  line-height: 140px;
+  text-align: center;
+  vertical-align: middle;
+  width: 140px;
+}
+
+#about {
+  background: url('/assets/about.jpg') no-repeat center center fixed; 
+  display: table;
+  height: 800px;
+  position: relative;
+  width: 100%;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+#about .panel {
+  opacity: 0.85;
+}
+
+footer {
+  padding: 20px 0;
+}
+footer .glyphicon {
+  color: #333333;
+  font-size: 60px;
+}
+footer .glyphicon:hover {
+  color: #306d9f;
+}
