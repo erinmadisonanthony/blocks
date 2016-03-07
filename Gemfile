@@ -1,15 +1,18 @@
 source 'https://rubygems.org'
 
+# Use Devise for user authentication
 gem 'devise', '>= 3.2.4'
+# Use SimpleForm for forms
 gem 'simple_form'
-gem 'bootstrap-sass', '~> 3.3.6'
+# Use Boostrap for styles
+gem 'bootstrap-sass', '~> 3.3.5.1'
 gem 'sprockets', '2.11.0'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.4'
 # Use postgresql as the database for Active Record
 gem 'pg'
 # Use SCSS for stylesheets
-gem 'sass-rails', '~> 5.0'
+gem 'sass-rails'
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
 # Use CoffeeScript for .coffee assets and views
@@ -48,3 +51,7 @@ group :development do
   gem 'spring'
 end
 
+group :production do
+  # Use 12Factor for production asset service and Heroku error logging
+  gem 'rails_12factor'
+end
