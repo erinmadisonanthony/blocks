@@ -8,8 +8,11 @@ class BlogsController < ApplicationController
   end
 
   def create
-    Blog.create(blog_params)
-    redirect_to root_path
+    @blog = Blog.create(blog_params)
+    if @blog.invalid?
+      flash[:error] = 'Please enter a value'
+    end
+    redirect_to new_blog_path
   end
 
   private

@@ -8,8 +8,11 @@ class ResourcesController < ApplicationController
   end
 
   def create
-    Resource.create(resource_params)
-    redirect_to root_path
+    @resource = Resource.create(resource_params)
+    if @resource.invalid?
+      flash[:error] = 'Please enter a value'
+    end
+    redirect_to new_resource_path
   end
 
   private
