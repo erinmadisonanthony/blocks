@@ -1,4 +1,5 @@
 class BlogsController < ApplicationController
+  before_action :authenticate_user!, only: [:new, :create]
 
   def index
   end
@@ -8,7 +9,7 @@ class BlogsController < ApplicationController
   end
 
   def create
-    @blog = Blog.create(blog_params)
+    @blog = current_user.blogs.create(blog_params)
     if @blog.invalid?
       flash[:error] = 'Please enter a value'
     end
