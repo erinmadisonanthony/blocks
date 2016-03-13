@@ -2,10 +2,7 @@ class ResourcesController < ApplicationController
   before_action :authenticate_user!, only: [:new, :create]
 
   def index
-  end
-
-  def new
-    @resource = Resource.new
+    @resources = Resource.all 
   end
 
   def create
@@ -13,7 +10,7 @@ class ResourcesController < ApplicationController
     if @resource.invalid?
       flash[:error] = 'Please enter a value'
     end
-    redirect_to new_resource_path
+    redirect_to user_path(current_user)
   end
 
   private
