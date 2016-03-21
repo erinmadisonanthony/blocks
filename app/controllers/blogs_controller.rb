@@ -2,6 +2,7 @@ class BlogsController < ApplicationController
   before_action :authenticate_user!, only: [:new, :create]
 
   def index
+    @blogs = Blog.all 
   end
 
   def new
@@ -13,7 +14,11 @@ class BlogsController < ApplicationController
     if @blog.invalid?
       flash[:error] = 'Please enter a value'
     end
-    redirect_to new_blog_path
+    redirect_to blogs_path
+  end
+
+  def show
+    @blog = Blog.find(params[:id])
   end
 
   private

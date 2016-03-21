@@ -1,1 +1,7 @@
-<h1>This is the blog index page</h1>
+<% @blogs.each do |blog| %>
+    <div class="col-xs-10 col-xs-offset-1">
+        <h1><%= link_to blog.title, blog_path(blog) %></h1><br />
+        <i><%= blog.author %></i>
+        <p><%= blog.created_at %></p><br />
+    </div>  
+<% end %>
