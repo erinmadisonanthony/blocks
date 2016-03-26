@@ -8,6 +8,10 @@ html, body {
   width: 100%;
 }
 
+h1, h2 {
+  text-align: center;
+}
+
 /* padded section */
 .pad-section {
   padding: 50px 0;
@@ -51,6 +55,10 @@ a:link {
 #blog {
   background-color: #306d9f;
   color: #ffffff;
+}
+
+#blog h1 {
+  font-size: 3.5em;
 }
 
 #builder {
@@ -106,4 +114,24 @@ footer .glyphicon {
 }
 footer .glyphicon:hover {
   color: #306d9f;
+}
+
+.blog-box {
+  -moz-box-shadow: 1px 1px 2px 0 #d0d0d0;
+  -webkit-box-shadow: 1px 1px 2px 0 #d0d0d0;
+  box-shadow: 1px 1px 2px 0 #d0d0d0;
+  background: #ffffff;
+  border: 7px solid #cccccc;
+  border-color: #e4e4e4 #bebebd #bebebd #e4e4e4;
+  margin: 45px;
+  padding: 3px;
+}
+
+#blog-img {
+  width: 40%;
+  height: auto;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: -15px;
 }

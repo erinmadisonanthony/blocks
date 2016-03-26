@@ -11,18 +11,14 @@
 
 <!-- second section - Blog -->
 <div id="blog" class="pad-section">
+  <h1>Thoughts on Learning to Code</h1>
   <div class="container">
-    <div class="row">
-      <div class="col-sm-4">
-        <img src="#" alt="Story 1" />
+    <% @blogs.last(3).each do |blog| %>
+      <div class="blog-box col-sm-3">
+        <h2><%= link_to blog.title, blog_path(blog) %></h2>
+        <img id="blog-img" src="assets/bloglyph.png" />
       </div>
-      <div class="col-sm-4">
-        <img src="#" alt="Story 2" />
-      </div>
-      <div class="col-sm-4">
-        <img src="#" alt="Story 3" />
-      </div>
-    </div>
+    <% end %>  
   </div>
 </div>
 <!-- /second section -->
